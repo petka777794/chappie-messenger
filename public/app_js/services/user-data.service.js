@@ -25,7 +25,7 @@ var UserDataService = function () {
         _classCallCheck(this, UserDataService);
 
         this.http = http;
-        this.currentOpponent = new user_1.User('Your Chappie', '57af152f44cf04700a5e5828');
+        this.currentOpponent = new user_1.User('Your Chappie', '57af17ae2e31491c1f1b42e2');
     }
 
     _createClass(UserDataService, [{

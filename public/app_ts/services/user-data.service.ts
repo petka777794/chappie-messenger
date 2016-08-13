@@ -8,7 +8,7 @@ export class UserDataService{
 	currentUser: User;
 	currentOpponent: User;
 	constructor(private http: Http){
-		this.currentOpponent = new User('Your Chappie', '57af152f44cf04700a5e5828');
+		this.currentOpponent = new User('Your Chappie', '57af17ae2e31491c1f1b42e2');
 
 	}
 	getCurrentUser(){
