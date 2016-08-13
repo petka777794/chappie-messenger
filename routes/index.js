@@ -6,7 +6,7 @@ var log = require('../libs/log')(module);
 
 router.get('/', function(req, res, next) {
 	res.render('index', { 
-			title: 'Welcome to Chat!', 
+			title: 'Chappie messenger', 
 		});
 });
 
