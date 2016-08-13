@@ -19,7 +19,7 @@ app.set('view engine', 'jade');
 // app config sets
 
 app.set('env', config.get('env'));
-app.set('port', config.get('port'));
+app.set('port', normalizePort(process.env.PORT || config.get('port'));
 
 // uncomment after placing your favicon in /public
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
