@@ -28,7 +28,7 @@ module.exports = [
 	'How do you spell supercalifragilisticexpialidocious?',
 	'What are you doing later?',
 	'Are you on Facebook?',
-	'Would u like to have coffee with me?'
+	'Would u like to have coffee with me?',
 	'Are you serious?',
 	'Winter\'s coming !',
 	'Are you human?',
