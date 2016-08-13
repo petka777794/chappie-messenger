@@ -4,7 +4,7 @@ var mongoose = require('../libs/mongoose');
 var async = require('async');
 var HttpError = require('../libs/httpError');
 
-var ChappieId = '57adde2fa14963d00ed28a79'
+var ChappieId = '57af152f44cf04700a5e5828'
 // incude models
 var User = require('../models/users');
 var Dialog = require('../models/dialogs');
