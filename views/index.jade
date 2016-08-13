@@ -3,11 +3,15 @@ html.loaded(lang='en')
 	head
 		meta(charset='UTF-8')
 		meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
-		meta(name='twitter:card', content='summary')
-		meta(name='twitter:creator', content='@webholt')
-		meta(name='twitter:title', content='Chappie messenger')
-		meta(name='twitter:description', content='Just an easy Node.js messenger created by Andrey Krupskii.')
+ 		//- meta for seo
+		meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+		meta(name='description', content='My first node.js app creating with express, mongoDB, angular 2, socket.io by frontend developer Andrey Krupskii.')
+		meta(name='keywords', content='node, express, mongo, angular, socket')
+		meta(name='author', content='Andrey Krupskii')
+		meta(name='publisher-email', content='andreykrupskii@gmail.com')
+		meta(name='robots', content='index, follow')
 		meta(name='twitter:image', content='http://github.com/AndreyKrupskii/chappie-messenger/blob/master/public/logo.PNG')
+		//- web ref
 		title= title
 		link(href='/css/normalize.css', media='screen, projection', rel='stylesheet', type='text/css')
 		link(href='/css/screen.css', media='screen, projection', rel='stylesheet', type='text/css')
