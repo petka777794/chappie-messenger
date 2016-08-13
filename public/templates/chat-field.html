@@ -1,0 +1,29 @@
+<div class="main__chat">    
+	<div class="chat">
+		<div class="chat__top"> 
+			<i (click)='openMenu($event)' class="fa fa-bars chat__bars" aria-hidden="true"></i>
+			<span class="chat__opponent">
+				<i class="fa fa-user-secret" aria-hidden="true"></i>
+				{{userDataService.currentOpponent.username}} 
+			</span>
+		</div>
+		<div class="chat__field">
+			<div class="chat__history--wrap custom-scroll">
+				<div class="chat__history">
+					<div *ngFor="let phrase of (dialog | messagesFilter)"  @fadeIn="'in'"
+					class="messadge {{addMessageClass(phrase).textClass}}">
+						<span class="messadge__wrap">
+							<i class="fa {{addMessageClass(phrase).iconClass}} messadge-i" aria-hidden="true"></i>
+							<span class="messadge__text">{{phrase.message}}</span>
+						</span>
+					</div>
+				</div>
+			</div>
+			
+			<div class="chat__input">
+				<i (click)="sendMessage($event)" class="fa fa-comment chat__send" aria-hidden="true"></i>
+				<textarea [(ngModel)]="messageInputQuery" (keydown.enter)="sendMessage($event)"  placeholder="What ?.." name="chat__textarea" id="chat__textarea"  rows="1"></textarea>
+			</div>
+		</div>
+	</div>
+</div>

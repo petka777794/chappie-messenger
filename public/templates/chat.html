@@ -1,0 +1,5 @@
+<div @fadeIn="'in'" class="screen__main--chat">
+	<chat-list (onChangeCurrentOpponent)="onChangeCurrentOpponent($event)" 
+	 (onLogOut)="onLogOut($event)"></chat-list>
+	<chat-field [currentOpponent]="currentOpponent" [disconnection]="disconnection"></chat-field>
+</div>

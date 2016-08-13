@@ -1,0 +1,105 @@
+doctype html
+html.loaded(lang='en')
+	head
+		meta(charset='UTF-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+		title= title
+		link(href='css/normalize.css', media='screen, projection', rel='stylesheet', type='text/css')
+		link(href='css/screen.css', media='screen, projection', rel='stylesheet', type='text/css')
+		link(href='css/font-awesome.min.css', media='screen, projection', rel='stylesheet', type='text/css')
+		script(src='bower_components/jquery.min.js')
+		// Angular2 appp
+		// 1. Load libraries
+		// Polyfill(s) for older browsers
+		script(src='node_modules/core-js/client/shim.min.js')
+		script(src='node_modules/zone.js/dist/zone.js')
+		script(src='node_modules/reflect-metadata/Reflect.js')
+		script(src='node_modules/systemjs/dist/system.src.js')
+		// 2. Configure SystemJS
+		script(src='systemjs.config.js')
+		script.
+			System.import('app_js').catch(function(err){ console.error(err); });
+		// Angular2 appp
+		base(href='/') 
+		script(src="/socket.io/socket.io.js")
+	body.body.loaded
+		.loader
+			.loader-inner.line-scale
+				div
+				div
+				div
+				div
+				div
+		section.wrap.loaded
+			.iphone.loaded
+				.iphone__part.top
+					i.top__sound
+				.iphone__part.screen__wrap
+					.screen.loaded
+						.screen--mod.screen--locked
+							.screen__top
+								span.top__item.top__connection
+									span.connection__dot
+									span.connection__dot
+									span.connection__dot
+									span.connection__dot
+									span.connection__dot
+									span.connection__wifi.fa.fa-rss(aria-hidden='true')
+								span.top__item.top__time
+								span.top__item.top__charge
+									span.charge__val 27%
+									span.charge__battery.fa.fa-battery-quarter(aria-hidden='true')
+							.screen__main
+								h1.main__time
+								h6.main__date
+								.main__message.loaded
+									p
+										i.fa.fa-envelope-o.message__icon(aria-hidden='true')
+										|  You have one message
+								span.main__slide-to-unlock
+									i.fa.fa-angle-double-left
+									|                   Slide to unlock
+						.screen--mod.screen--unlocked
+							.screen__top
+								span.top__item.top__connection
+									span.connection__dot
+									span.connection__dot
+									span.connection__dot
+									span.connection__dot
+									span.connection__dot
+									span.connection__wifi.fa.fa-rss(aria-hidden='true')
+								span.top__item.top__time
+								span.top__item.top__charge
+									span.charge__val 27%
+									span.charge__battery.fa.fa-battery-quarter(aria-hidden='true')
+							ng-app
+				.iphone__part.bottom
+					i.home--btn
+				.iphone__part.dop-details
+					i.dop-details__item.dop-details__mute
+					i.dop-details__item.dop-details__louder
+					i.dop-details__item.dop-details__silent
+					i.dop-details__item.dop-details__block
+			.iphone-vibration__wrap
+				.iphone-vibration.iphone-vibration--top
+					.iphone-vibration__item.iphone-vibration__item--small
+					.iphone-vibration__item.iphone-vibration__item--big
+				.iphone-vibration.iphone-vibration--bottom
+					.iphone-vibration__item.iphone-vibration__item--small
+					.iphone-vibration__item.iphone-vibration__item--big
+		section.description.loaded
+			.description__text
+				h1 Node.js messanger
+				p
+					| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui vitae laborum impedit similique dolores laboriosam ducimus consequatur saepe rerum quo asperiores placeat soluta maiores reprehenderit, ea vero maxime. Voluptatum, deleniti.
+		//if lt IE 9
+			script.
+				var e = ("article,aside,figcaption,figure,footer,header,hgroup,nav,section,time").split(',');
+				for (var i = 0; i < e.length; i++) {
+				document.createElement(e[i]);
+				}
+		script(src='bower_components/autosize.min.js')
+		script(src='js/web-animations.min.js')
+		script(src='bower_components/jquery.nicescroll.min.js')
+
+		script(src='js/script.js')

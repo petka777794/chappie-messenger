@@ -1,0 +1,9 @@
+{
+	"env": "prodaction",
+	"port": 5000,
+	"mongoose": {
+		
+		"uri":"mongodb://andreykrupskii:Rqpf3o1996@ds147995.mlab.com:47995/chappie",
+		"options": {}
+	}
+}
