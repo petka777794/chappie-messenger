@@ -22,7 +22,7 @@ app.set('env', config.get('env'));
 
 // set PORT
 
-var port = normalizePort(process.env.PORT)
+var port = process.env.PORT || config.get('port');
 app.set('port', port);
 
 function normalizePort(val) {
