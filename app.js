@@ -19,7 +19,22 @@ app.set('view engine', 'jade');
 // app config sets
 
 app.set('env', config.get('env'));
-app.set('port', normalizePort(process.env.PORT || config.get('port'));
+
+// set PORT
+
+var port = normalizePort(process.env.PORT || config.get('port'))
+app.set('port', port);
+
+function normalizePort(val) {
+	var port = parseInt(val, 10);
+	if (isNaN(port)) {
+		return val;
+	}
+	if (port >= 0) {
+		return port;
+	}
+	return false;
+}
 
 // uncomment after placing your favicon in /public
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -46,10 +61,10 @@ app.use('/authentication', authentication);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  var status = 404;
-  var message = 'I have some troubles with looking for your request. I\'m so sorry =(';
-  var err = new HttpError(status, message);
-  next(err);
+	var status = 404;
+	var message = 'I have some troubles with looking for your request. I\'m so sorry =(';
+	var err = new HttpError(status, message);
+	next(err);
 });
 
 
@@ -59,34 +74,34 @@ app.use(function(req, res, next) {
 // development error handler
 // will print stacktrace
 if (app.get('env') === 'development') {
-  app.use(function(err, req, res, next) {
-    res.status(err.status || 500);
-    if(res.req.headers['x-requested-with'] == 'XMLHttpRequest'){
-      log.info(res.req.headers['x-requested-with'])
-      res.json(err);
-    }  else{
-      res.render('error', {
-        message: err.message,
-        error: err
-      });
-    }
-  });
+	app.use(function(err, req, res, next) {
+		res.status(err.status || 500);
+		if(res.req.headers['x-requested-with'] == 'XMLHttpRequest'){
+			log.info(res.req.headers['x-requested-with'])
+			res.json(err);
+		}  else{
+			res.render('error', {
+				message: err.message,
+				error: err
+			});
+		}
+	});
 }
 
 // production error handler
 // no stacktraces leaked to user
 app.use(function(err, req, res, next) {
-  res.status(err.status || 500);
-  if(res.req.headers['x-requested-with'] == 'XMLHttpRequest'){
-    res.json(err);
-  } else{
-    res.render('error', {
-      message: err.message,
-      error: {
-        status: err.status
-      },
-    });
-  } 
+	res.status(err.status || 500);
+	if(res.req.headers['x-requested-with'] == 'XMLHttpRequest'){
+		res.json(err);
+	} else{
+		res.render('error', {
+			message: err.message,
+			error: {
+				status: err.status
+			},
+		});
+	} 
 });
 
 
