@@ -7,19 +7,19 @@ html.loaded(lang='en')
 		meta(name='twitter:creator', content='@webholt')
 		meta(name='twitter:title', content='Chappie messenger')
 		meta(name='twitter:description', content='Just an easy Node.js messenger created by Andrey Krupskii.')
-    meta(name='twitter:image', content='http://github.com/AndreyKrupskii/chappie-messenger/blob/master/public/logo.PNG')
+		meta(name='twitter:image', content='http://github.com/AndreyKrupskii/chappie-messenger/blob/master/public/logo.PNG')
 		title= title
-		link(href='css/normalize.css', media='screen, projection', rel='stylesheet', type='text/css')
-		link(href='css/screen.css', media='screen, projection', rel='stylesheet', type='text/css')
-		link(href='css/font-awesome.min.css', media='screen, projection', rel='stylesheet', type='text/css')
+		link(href='/css/normalize.css', media='screen, projection', rel='stylesheet', type='text/css')
+		link(href='/css/screen.css', media='screen, projection', rel='stylesheet', type='text/css')
+		link(href='/css/font-awesome.min.css', media='screen, projection', rel='stylesheet', type='text/css')
 		script(src='bower_components/jquery.min.js')
 		// Angular2 appp
 		// 1. Load libraries
 		// Polyfill(s) for older browsers
-		script(src='node_modules/core-js/client/shim.min.js')
-		script(src='node_modules/zone.js/dist/zone.js')
-		script(src='node_modules/reflect-metadata/Reflect.js')
-		script(src='node_modules/systemjs/dist/system.src.js')
+		script(src='/node_modules/core-js/client/shim.min.js')
+		script(src='/node_modules/zone.js/dist/zone.js')
+		script(src='/node_modules/reflect-metadata/Reflect.js')
+		script(src='/node_modules/systemjs/dist/system.src.js')
 		// 2. Configure SystemJS
 		script(src='systemjs.config.js')
 		script.
