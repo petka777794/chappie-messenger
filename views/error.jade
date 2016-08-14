@@ -8,8 +8,8 @@ html(lang="en")
 		link(href='/css/font-awesome.min.css', media='screen, projection', rel='stylesheet', type='text/css')
 		title Error message
 
-	body.error
-		.error__wrap 
+	body.error(style="position: relative;background: #31b69f; width: 100vw; height: 100vh; font-size: 30px")
+		.error__wrap(style="position: absolute; width: 80%; top: 50%; left: 50%; transform:translate(-50%,-50%); color:#fff;") 
 			h2(style='text-align: center')= message
 			br
 			h3(style='text-align: center') Status = #{error.status}
