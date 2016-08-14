@@ -27,9 +27,14 @@ var UserlistFilterPipe = function () {
         key: "transform",
         value: function transform(userlist, args) {
             if (userlist == null) return null;
-            return userlist.filter(function (user) {
+            var newUserList = userlist.filter(function (user) {
                 return user.username.toLowerCase().indexOf(args.toLowerCase()) !== -1;
             });
+            function sortUserlist(a, b) {
+                if (~a.username.indexOf('Your Chappie')) return -1;
+                return 1;
+            }
+            return newUserList.sort(sortUserlist);
         }
     }]);
 

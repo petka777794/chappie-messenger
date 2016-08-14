@@ -32,6 +32,11 @@ module.exports = (function(server) {
 		socket.on('join dialog', function (data) {
 			var currentUser = socket.handshake.session.userId;
 			currentOpponent = data;
+			// leave all rooms
+			for(var room in socket.rooms){
+				socket.leave(room)
+			}
+			// join to current room
 			async.waterfall([
 				findCurrentUsers, getDialogId, getDialogData
 				], function(err, dialog){
@@ -39,7 +44,7 @@ module.exports = (function(server) {
 
 					currentDialog = dialog;
 					socket.join(currentDialog.id);
-					io.to(currentDialog.id).emit('joined to dialog', currentDialog.data);
+					io.sockets.connected[socket.id].emit('joined to dialog', currentDialog.data);
 				})
 
 			function findCurrentUsers(callback) {

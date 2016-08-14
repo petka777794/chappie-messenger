@@ -105,9 +105,15 @@ html.loaded(lang='en')
 					.iphone-vibration__item.iphone-vibration__item--big
 		section.description.loaded
 			.description__text
-				h1 Node.js messanger
+				h1 Chappie messenger
 				p
-					| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui vitae laborum impedit similique dolores laboriosam ducimus consequatur saepe rerum quo asperiores placeat soluta maiores reprehenderit, ea vero maxime. Voluptatum, deleniti.
+					| Hi, everyone, my name is Chappie, and I'm just an easy messenger simulator created entirely on JavaScript. My core is based on Node.js, Express, Angular 2 and MongoDB. For more detail information you may follow me on 
+					a(href="https://github.com/AndreyKrupskii/chappie-messenger", style="color:#31b69f", target="_blank").text__link
+						| Githab 
+					| or  
+					a(href="https://habrahabr.ru/users/web_for_mass/topics/", style="color:#31b69f", target="_blank").text__link
+						| Habrahabr
+					|.
 		//if lt IE 9
 			script.
 				var e = ("article,aside,figcaption,figure,footer,header,hgroup,nav,section,time").split(',');
@@ -115,7 +121,6 @@ html.loaded(lang='en')
 				document.createElement(e[i]);
 				}
 		script(src='bower_components/autosize.min.js')
-		script(src='js/web-animations.min.js')
 		script(src='bower_components/jquery.nicescroll.min.js')
 
 		script(src='js/script.js')

@@ -32,7 +32,7 @@ gulp.task('ts', function () {
 	 		// .pipe(browserSync.reload({stream: true}));
 });
 
-
+ 
 gulp.task('reload', function () {
 	gulp.src('./*.html')
 		.pipe(browserSync.reload({stream: true}));

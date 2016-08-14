@@ -57,14 +57,14 @@ export class ChatFieldComponent implements OnInit, OnChanges{
 
 		if(changes['currentOpponent'] && this.connected){
 			if(changes['currentOpponent'].currentValue){
-				this.joinDialog();
+				this.joinDialog(); 
 			}
 		}
 
 		if (changes['disconnection']){
 			if (changes['disconnection'].currentValue) {
 				this.disconnectDialog();
-			}
+			} 
 		}
 	}
 
@@ -74,7 +74,7 @@ export class ChatFieldComponent implements OnInit, OnChanges{
 			document.querySelector('.menu__wrap').classList.add('visable');
 			document.querySelector('.chat__search').focus(); 
 		}, 300);
-	}
+	}  
 
 	includeFrontendPlugins(){
 		$('.chat__history--wrap.custom-scroll').niceScroll({
@@ -87,7 +87,7 @@ export class ChatFieldComponent implements OnInit, OnChanges{
 			cursorwidth: 3,
 			cursorborderradius: 0
 		});
-		$('#chat__textarea').niceScroll({
+		$('#chat__textarea').niceScroll({ 
 			cursorcolor: '#db504a'
 		});
 		autosize($('#chat__textarea'));
@@ -97,6 +97,7 @@ export class ChatFieldComponent implements OnInit, OnChanges{
 		this.socket.emit('join dialog', this.userDataService.currentOpponent._id);
 		this.connected = true;
 	}
+	// leaveDialog()
 
 	disconnectDialog(){
 		this.socket.emit('disconnect dialog');

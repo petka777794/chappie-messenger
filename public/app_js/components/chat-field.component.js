@@ -100,6 +100,8 @@ var ChatFieldComponent = function () {
             this.socket.emit('join dialog', this.userDataService.currentOpponent._id);
             this.connected = true;
         }
+        // leaveDialog()
+
     }, {
         key: "disconnectDialog",
         value: function disconnectDialog() {

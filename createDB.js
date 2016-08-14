@@ -37,22 +37,25 @@ function createUsers (callback) {
 			username: 'Your Chappie', password: 'werfv43juRFgctcKGG43YPHBVD8975FYfy'
 		},
 		{
-			username: 'Momo', password: '111111'
+			username: 'Jon Snow', password: '111111'
 		},
 		{
-			username: 'Kolia', password: '111111'
+			username: 'Tyrion Lannister', password: '111111'
 		},
 		{
-			username: 'Ira', password: '1111111'
+			username: 'Cersei Lannister', password: '1111111'
 		},
 		{
-			username: 'Polina', password: '1111wdwd11'
+			username: 'Jorah Mormont', password: '1111wdwd11'
 		},
 		{
-			username: 'Liza', password: '1111wdwd11'
+			username: '	Arya Stark', password: '1111wdwd11'
 		},
 		{
-			username: 'Edgar', password: '1111wdwd11'
+			username: 'Bran Stark', password: '1111wdwd11'
+		},
+		{
+			username: 'Robert Baratheon', password: '1111wdwd11'
 		},
 	];
 	async.each(users, function(usersData, callback){
